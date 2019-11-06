@@ -1,0 +1,15 @@
+<p>Launch Request - Following Parameters will be passed to tool</p>
+<pre>{{responseDisplayParams}}</pre>
+<button onclick="submitForm('POST')">Launch Request</button>
+
+<form id="ltiForm" name="ltiForm" action={{action}} method={{method}}>
+    {{#each responseParams as |value key|}}
+    <input type="hidden" name={{key}} value={{value}} />
+    {{/each}}
+</form>
+
+<script>
+    function submitForm(method) {
+        document.getElementById("ltiForm").submit();
+    }
+</script>

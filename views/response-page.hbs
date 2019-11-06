@@ -1,0 +1,25 @@
+<p>Initiating Login Request - Following Parameters will be passed to tool</p>
+{{!-- <div class="mb-4">
+    {{#each responseParams}}
+        <div>
+            <span><b>{{@key}}:&nbsp;</b></span>
+            <span class="ml-1">{{this}}</span>
+        </div>
+    {{/each}}
+</div> --}}
+<pre>{{loginParams}}</pre>
+<button onclick="submitForm('GET')">GET Request</button>
+<button onclick="submitForm('POST')">POST Request</button>
+
+
+<form id="form" action="{{action}}">
+{{#each responseParams}}
+    <input name="{{@key}}" value="{{this}}" type="hidden"></input>
+{{/each}}
+</form>
+<script>
+    function submitForm(method) {
+        document.getElementById("form").setAttribute('method', method);
+        document.getElementById("form").submit();
+    }
+</script>

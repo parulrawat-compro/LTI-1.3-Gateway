@@ -1,0 +1,49 @@
+[
+  {
+    "iss": "http://platform.com",
+    "id": "platform-1",
+    "oidc_url": "http://platform.com/oidc",
+    "oauth2_token_url": "http://platform.com/oauth2_token",
+    "registrations": [
+      {
+        "tool_url": "http://tool.com/tools/1001",
+        "client_id": "12345",
+        "platform_keys": {
+          "keyset_url": "http://platform.com/keys"
+        },
+        "deployments": [
+          {
+            "id": "f2345z"
+          },
+          {
+            "id": "a67sdfg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "iss": "http://localhost:3000",
+    "id": "platform-2",
+    "name": "Platform #2",
+    "oidc_url": "http://localhost:3000/oidc",
+    "oauth2_token_url": "http://localhost:3000/oauth2_token",
+    "registrations": [
+      {
+        "tool_url": "https://lti-ri.imsglobal.org/lti/tools/537",
+        "client_id": "4001",
+        "platform_keys": {
+          "keyset_url": "http://localhost:3000/keys"
+        },
+        "deployments": [
+          {
+            "id": "f2345z"
+          },
+          {
+            "id": "a67sdfg"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+{
+    "app": {
+        "title": "LTI Seed App",
+        "port":5000
+    },
+    "session":{
+        "secret":"app_secret",
+        "expiry":86400000,
+        "cookie":{
+            "maxAge": 86400000
+        }
+    },
+    "jwt":{
+        "expiry": 600
+    }
+}

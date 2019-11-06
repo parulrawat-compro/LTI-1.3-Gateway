@@ -1,0 +1,8 @@
+<h2>{{pageTitle}}</h2>
+<h4>Validation of input params failed with error message:</h4>
+<p>{{errorMsg}}</p>
+
+<h4>Input Parameters Received:</h4>
+{{#each oidcParams}}
+<p>{{@key}}: {{this}}</p>
+{{/each}}
