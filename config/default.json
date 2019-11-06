@@ -1,6 +1,6 @@
 {
     "app": {
-        "title": "LTI Seed App",
+        "title": "LTI Gateway",
         "port":5000
     },
     "session":{
