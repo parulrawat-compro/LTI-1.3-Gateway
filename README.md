@@ -21,6 +21,9 @@ npm start
 # Test on localhost
 http://localhost:5000
 
+#Test on Heroku
+https://lti-1-3-gateway.herokuapp.com/
+
 ```
 
 ## Project Structure

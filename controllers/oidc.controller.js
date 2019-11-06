@@ -17,7 +17,7 @@ function renderErrorPage(res, oidcParams, errorMsg) {
 
 async function generateIdToken(res, oidcParams, platform, registration) {
   // make api call
-  const platformDetails = await axios.get(('http://parul:3000/platform/getdata?userId=user-000-000-001&resLinkId=res-000-000-001'));
+  const platformDetails = await axios.get(('https://lti-1-3-platform-poc.herokuapp.com/platform/getdata?userId=user-000-000-001&resLinkId=res-000-000-001'));
 
   // Generate payload
   const audience = platform.getAllRegisteredClientIds();
