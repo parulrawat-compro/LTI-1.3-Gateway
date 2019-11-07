@@ -85,7 +85,7 @@ module.exports = {
     req.session.resLinkId = 'res-000-000-001';
 
     const oidcParams = { ...req.query };
-    const { platformId } = req.params;
+    const { id } = req.params;
 
     // Validating params against OIDC schema
     const { valid, errorMsg } = oidcValidator(oidcParams);
@@ -94,7 +94,10 @@ module.exports = {
     }
 
     // get platform data corresponsing to platform Id
-    const platform = platformService.getPlatformById(platformId);
+    const platform = platformService.getPlatformById(id);
+    if (!platform) {
+      return renderErrorPage(res, oidcParams, `Platform not found with platformId ${oidcParams.client_id}`);
+    }
 
     // Check valid client id for this platform
     const registration = platform.getRegistrationByClientId(oidcParams.client_id);
